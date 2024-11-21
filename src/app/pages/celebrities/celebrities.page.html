@@ -13,7 +13,7 @@
         <ul class="d-flex flex-wrap align-items-center justify-content-around gap-4 p-4">
             <li class="list-unstyled border border-primary rounded" *ngFor="let celebrity of dataCelebrities"
                 style="width: 18.15rem; min-height: 609px;">
-                <app-card [image]="celebrity.profile_path" [title]="celebrity.name"
+                <app-card appColorOnHover [image]="celebrity.profile_path" [title]="celebrity.name"
                     [href]="'/celebrities/view/' + celebrity.id">
                 </app-card>
             </li>

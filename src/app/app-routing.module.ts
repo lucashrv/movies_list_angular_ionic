@@ -13,27 +13,27 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    loadChildren: () => import('./movies/movies.module').then(m => m.MoviesPageModule)
+    loadChildren: () => import('./pages/movies/movies.module').then(m => m.MoviesPageModule)
   },
   {
     path: 'movies/view/:id',
-    loadChildren: () => import('./movies/view/view.module').then(m => m.ViewPageModule)
+    loadChildren: () => import('./pages/movies/view/view.module').then(m => m.ViewPageModule)
   },
   {
     path: 'series',
-    loadChildren: () => import('./series/series.module').then(m => m.SeriesPageModule)
+    loadChildren: () => import('./pages/series/series.module').then(m => m.SeriesPageModule)
   },
   {
     path: 'series/view/:id',
-    loadChildren: () => import('./series/view/view.module').then(m => m.ViewPageModule)
+    loadChildren: () => import('./pages/series/view/view.module').then(m => m.ViewPageModule)
   },
   {
     path: 'celebrities',
-    loadChildren: () => import('./celebrities/celebrities.module').then(m => m.CelebritiesPageModule)
+    loadChildren: () => import('./pages/celebrities/celebrities.module').then(m => m.CelebritiesPageModule)
   },
   {
     path: 'celebrities/view/:id',
-    loadChildren: () => import('./celebrities/view/view.module').then(m => m.ViewPageModule)
+    loadChildren: () => import('./pages/celebrities/view/view.module').then(m => m.ViewPageModule)
   },
 ];
 

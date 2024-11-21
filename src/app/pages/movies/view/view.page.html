@@ -5,14 +5,14 @@
   <a href="/movies" class="btn btn-primary mt-5" style="margin-left: 50px">Voltar</a>
 
   <div class="mt-5">
-    <img src="https://image.tmdb.org/t/p/w500{{dataMovie.poster_path}}"
-      class="rounded mx-auto d-block border border-3 border-primary" alt="dataMovie.title">
+    <img appChangeBorderColorOnHover src="https://image.tmdb.org/t/p/w500{{dataMovie.poster_path}}"
+      class="rounded mx-auto d-block" alt="dataMovie.title" style="border: 3px solid #0d6efd;">
 
     <div style="padding-left: 50px; padding-right: 50px; margin: 50px 0 50px 0;">
       <h1>Título: {{dataMovie.title}}</h1>
       <h1>Nota: {{dataMovie.vote_average}}</h1>
-      <h1>Orçamento: {{dataMovie.budget | currency:'USD':true}}</h1>
-      <h1>Data de lançamento: {{dataMovie.release_date | date:'dd/MM/yyyy'}}</h1>
+      <h1>Orçamento: {{dataMovie.budget | currency:'BRL':true}}</h1>
+      <h1>Data de lançamento: {{dataMovie.release_date | formatDatePtBr}}</h1>
       <h1>Sinopse: {{dataMovie.overview}}</h1>
     </div>
   </div>

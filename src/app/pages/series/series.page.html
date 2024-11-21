@@ -13,7 +13,7 @@
         <ul class="d-flex flex-wrap align-items-center justify-content-around gap-4 p-4">
             <li class="list-unstyled border border-primary rounded" *ngFor="let serie of dataSeries"
                 style="width: 18.15rem; min-height: 609px;">
-                <app-card [image]="serie.poster_path" [title]="serie.name" [vote]="serie.vote_average"
+                <app-card appColorOnHover [image]="serie.poster_path" [title]="serie.name" [vote]="serie.vote_average"
                     [href]="'/series/view/' + serie.id">
                 </app-card>
             </li>

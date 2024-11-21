@@ -5,14 +5,14 @@
   <a href="/series" class="btn btn-primary mt-5" style="margin-left: 50px;">Voltar</a>
 
   <div class="mt-5">
-    <img src="https://image.tmdb.org/t/p/w500{{dataSerie.poster_path}}"
-      class="rounded mx-auto d-block border border-3 border-primary" alt="dataSerie.name">
+    <img appChangeBorderColorOnHover src="https://image.tmdb.org/t/p/w500{{dataSerie.poster_path}}"
+      class="rounded mx-auto d-block" alt="dataSerie.name" style="border: 3px solid #0d6efd;">
 
     <div style="padding-left: 50px; padding-right: 50px; margin: 50px 0 50px 0;">
       <h1>Título: {{dataSerie.name}}</h1>
       <h1>Temporadas: {{dataSerie.number_of_seasons}}</h1>
       <h1>Nota: {{dataSerie.vote_average}}</h1>
-      <h1>Data de lançamento: {{dataSerie.first_air_date | date:'dd/MM/yyyy'}}</h1>
+      <h1>Data de lançamento: {{dataSerie.first_air_date | formatDatePtBr}}</h1>
       <h1>Sinopse: {{dataSerie.overview}}</h1>
     </div>
   </div>

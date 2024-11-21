@@ -13,7 +13,7 @@
         <ul class="d-flex flex-wrap align-items-center justify-content-around gap-5 p-4">
             <li class="list-unstyled border border-primary rounded" *ngFor="let movie of dataMovies"
                 style="width: 18.15rem; min-height: 609px;">
-                <app-card [image]="movie.poster_path" [title]="movie.title" [vote]="movie.vote_average"
+                <app-card appColorOnHover [image]="movie.poster_path" [title]="movie.title" [vote]="movie.vote_average"
                     [href]="'/movies/view/' + movie.id">
                 </app-card>
             </li>

@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { SeriesPageRoutingModule } from './series-routing.module';
-
 import { SeriesPage } from './series.page';
-
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
+import { ColorOnHoverDirective } from 'src/app/directives/colorOnHover/color-on-hover.directive';
 
 @NgModule({
   imports: [
@@ -16,7 +13,8 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     IonicModule,
     SeriesPageRoutingModule,
-    SharedModule
+    SharedModule,
+    ColorOnHoverDirective
   ],
   declarations: [SeriesPage]
 })
