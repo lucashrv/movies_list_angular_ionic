@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<ion-content>
+    <h1 class="fs-1 p-4">Movies List</h1>
+
+    <div>
+        <ul class="d-flex flex-wrap align-items-center justify-content-around gap-5 p-4">
+            <li class="list-unstyled border border-primary rounded" style="width: 18.15rem; min-height: 609px;">
+                <app-card [image]="movie[0] ? movie[0].poster_path : ''" [title]="'Filmes melhores avaliados'"
+                    [href]="'/movies'">
+                </app-card>
+            </li>
+
+            <li class="list-unstyled border border-primary rounded" style="width: 18.15rem; min-height: 609px;">
+                <app-card [image]="serie[0] ? serie[0].poster_path : ''" [title]="'Séries melhores avaliadas'"
+                    [href]="'/series'">
+                </app-card>
+            </li>
+
+            <li class="list-unstyled border border-primary rounded" style="width: 18.15rem; min-height: 609px;">
+                <app-card [image]="celebrity[0] ? celebrity[0].profile_path : ''"
+                    [title]="'Celebridades mais populares'" [href]="'/celebrities'">
+                </app-card>
+            </li>
+        </ul>
+    </div>
+</ion-content>
+
+<app-footer></app-footer>

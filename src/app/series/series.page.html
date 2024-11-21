@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<ion-content>
+    <h1 class="fs-1 p-4">Séries</h1>
+
+    <div class="input-group mx-auto mb-5" style="max-width: 450px;">
+        <input type="text" class="form-control" placeholder="Buscar séries..." aria-label="Buscar séries..."
+            aria-describedby="button-addon2" [(ngModel)]="searchQuery" name="searchQuery">
+        <button class="btn btn-primary" type="submit" id="button-addon2" (click)="searchSeries()">Buscar</button>
+    </div>
+
+    <div *ngIf="dataSeries.length > 0; else noDataSeries">
+        <ul class="d-flex flex-wrap align-items-center justify-content-around gap-4 p-4">
+            <li class="list-unstyled border border-primary rounded" *ngFor="let serie of dataSeries"
+                style="width: 18.15rem; min-height: 609px;">
+                <app-card [image]="serie.poster_path" [title]="serie.name" [vote]="serie.vote_average"
+                    [href]="'/series/view/' + serie.id">
+                </app-card>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #noDataSeries>
+        <p>Carregando...</p>
+    </ng-template>
+</ion-content>
+
+<app-footer></app-footer>

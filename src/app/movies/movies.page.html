@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<ion-content>
+    <h1 class="fs-1 p-4">Filmes</h1>
+
+    <div class="input-group mx-auto mb-5" style="max-width: 450px;">
+        <input type="text" class="form-control" placeholder="Buscar filmes..." aria-label="Buscar filmes..."
+            aria-describedby="button-addon2" [(ngModel)]="searchQuery" name="searchQuery">
+        <button class="btn btn-primary" type="submit" id="button-addon2" (click)="searchMovies()">Buscar</button>
+    </div>
+
+    <div *ngIf="dataMovies.length > 0; else noDataMovies">
+        <ul class="d-flex flex-wrap align-items-center justify-content-around gap-5 p-4">
+            <li class="list-unstyled border border-primary rounded" *ngFor="let movie of dataMovies"
+                style="width: 18.15rem; min-height: 609px;">
+                <app-card [image]="movie.poster_path" [title]="movie.title" [vote]="movie.vote_average"
+                    [href]="'/movies/view/' + movie.id">
+                </app-card>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #noDataMovies>
+        <p>Carregando...</p>
+    </ng-template>
+</ion-content>
+
+<app-footer></app-footer>

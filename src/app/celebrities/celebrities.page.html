@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<ion-content>
+    <h1 class="fs-1 p-4">Celebridades</h1>
+
+    <div class="input-group mx-auto mb-5" style="max-width: 450px;">
+        <input type="text" class="form-control" placeholder="Buscar celebridades..." aria-label="Buscar celebridades..."
+            aria-describedby="button-addon2" [(ngModel)]="searchQuery" name="searchQuery">
+        <button class="btn btn-primary" type="submit" id="button-addon2" (click)="searchCelebrities()">Buscar</button>
+    </div>
+
+    <div *ngIf="dataCelebrities.length > 0; else noDataCelebrities">
+        <ul class="d-flex flex-wrap align-items-center justify-content-around gap-4 p-4">
+            <li class="list-unstyled border border-primary rounded" *ngFor="let celebrity of dataCelebrities"
+                style="width: 18.15rem; min-height: 609px;">
+                <app-card [image]="celebrity.profile_path" [title]="celebrity.name"
+                    [href]="'/celebrities/view/' + celebrity.id">
+                </app-card>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #noDataCelebrities>
+        <p>Carregando...</p>
+    </ng-template>
+</ion-content>
+
+<app-footer></app-footer>
